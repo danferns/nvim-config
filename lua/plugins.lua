@@ -145,7 +145,7 @@ require('lazy').setup({
     },
   },
   {
-    "patstockwell/vim-monokai-tasty",
+    "danferns/vim-monokai-tasty",
   },
 
   {
