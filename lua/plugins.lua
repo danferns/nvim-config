@@ -145,10 +145,6 @@ require('lazy').setup({
     },
   },
   {
-    "danferns/vim-monokai-tasty",
-  },
-
-  {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
     -- See `:help lualine.txt`
