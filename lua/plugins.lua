@@ -151,7 +151,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = true,
-        theme = 'nova',
+        theme = 'catppuccin',
         component_separators = '',
         section_separators = '',
       },
@@ -210,4 +210,7 @@ require('lazy').setup({
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
   -- { import = 'custom.plugins' },
+  {
+    'catppuccin/nvim', name = 'catppuccin', priority = 1000
+  }
 }, {})

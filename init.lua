@@ -6,10 +6,31 @@ vim.g.maplocalleader = ' '
 require('plugins')
 
 -- Theme settings
-vim.g.vim_monokai_tasty_italic = 1
-vim.g.vim_monokai_tasty_machine_tint = 0
-vim.g.vim_monokai_tasty_highlight_active_window = 1
-vim.cmd([[colorscheme the_monokai]])
+require("catppuccin").setup({
+  dim_inactive = {
+    enabled = true
+  },
+  styles = {
+    comments = {},
+    conditionals = {},
+    keywords = { "italic" },
+  },
+  color_overrides = {
+    mocha = {
+      base = "#151515",
+      mantle = "#202020",
+      crust = "#151515",
+    }
+  },
+  integrations = {
+    telescope = {
+      enabled = true,
+      style = "nvchad"
+    }
+  }
+})
+
+vim.cmd.colorscheme "catppuccin-mocha"
 
 -- Hide the welcome message
 vim.cmd([[set shortmess=I "]])
