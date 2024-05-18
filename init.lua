@@ -30,7 +30,7 @@ require("catppuccin").setup({
   }
 })
 
-vim.cmd.colorscheme "catppuccin-mocha"
+vim.cmd.colorscheme "catppuccin"
 
 -- Hide the welcome message
 vim.cmd([[set shortmess=I "]])
@@ -279,7 +279,7 @@ require('mason-lspconfig').setup()
 --  If you want to override the default filetypes that your language server will attach to you can
 --  define the property 'filetypes' to the map in question.
 local servers = {
-  -- clangd = {},
+  clangd = {},
   -- gopls = {},
   pyright = {},
   rust_analyzer = {},

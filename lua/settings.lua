@@ -39,3 +39,7 @@ vim.o.termguicolors = true
 
 -- remove the showmode as  we're using lualine
 vim.opt.showmode = false
+
+vim.o.tabstop = 4
+
+vim.g.have_nerd_font = true
