@@ -39,7 +39,7 @@ require('settings')
 require('remaps')
 
 -- App specific config
-require('neovide')
+require('apps.neovide')
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
