@@ -1,5 +1,8 @@
 -- [[ Setting options ]]
 
+-- Hide the welcome message
+vim.cmd([[set shortmess=I "]])
+
 -- Set highlight on search
 vim.o.hlsearch = false
 
@@ -43,3 +46,4 @@ vim.opt.showmode = false
 vim.o.tabstop = 4
 
 vim.g.have_nerd_font = true
+vim.cmd([[set shell=nu]])
