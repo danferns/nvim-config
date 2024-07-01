@@ -49,7 +49,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
-require('telescope')
+require('telescopeConfig')
 require('treesitter')
 require('lsp')
 

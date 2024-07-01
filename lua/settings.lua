@@ -10,12 +10,11 @@ vim.o.hlsearch = false
 vim.wo.number = true
 vim.wo.relativenumber = true
 
+-- Auto scroll when the cursor is too high or low
+vim.wo.scrolloff = 8
+
 -- Enable mouse mode
 vim.o.mouse = 'a'
-
--- Use system clipboard with leader
-vim.keymap.set("n", "<leader>y", "\"+y")
-vim.keymap.set("n", "<leader>p", "\"+p")
 
 -- Enable break indent
 vim.o.breakindent = true
