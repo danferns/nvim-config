@@ -46,4 +46,5 @@ vim.keymap.set('n', '<Leader>gc', ':G commit<CR>')
 vim.keymap.set('n', '<Leader>gC', ':G commit -a<CR>')
 vim.keymap.set('n', '<Leader>gd', ':Gvdiffsplit<CR>')
 vim.keymap.set('n', '<Leader>gs', ':Git<CR>')
+vim.keymap.set('n', '<Leader>gp', ':Git push<CR>')
 
