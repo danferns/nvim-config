@@ -32,8 +32,8 @@ require("catppuccin").setup({
 
 vim.cmd.colorscheme "catppuccin"
 
-require('settings')
 require('remaps')
+require('settings')
 
 -- App specific config
 require('apps.neovide')
