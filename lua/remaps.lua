@@ -11,9 +11,16 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Use system clipboard with leader
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>p", "\"+p")
+vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set("v", "<leader>p", "\"+p")
 
--- Format Selected Lines
-vim.keymap.set('v', '<Leader>f', vim.lsp.buf.format, {})
+-- Move selection up down
+vim.keymap.set('v', 'J', ':m \'>+1<CR>gv=gv')
+vim.keymap.set('v', 'K', ':m \'<-2<CR>gv=gv')
+
+-- Create a new empty line
+vim.keymap.set('n', '<CR>', 'o<Esc>')
+vim.keymap.set('n', '<S-CR>', 'O<Esc>')
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
