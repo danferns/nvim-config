@@ -43,6 +43,10 @@ vim.o.termguicolors = true
 vim.opt.showmode = false
 
 vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
+vim.o.smartindent = true
 
 vim.g.have_nerd_font = true
 vim.cmd([[set shell=nu]])
