@@ -11,7 +11,7 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 
 -- Auto scroll when the cursor is too high or low
-vim.wo.scrolloff = 8
+vim.wo.scrolloff = 10
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
