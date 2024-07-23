@@ -52,4 +52,7 @@ require('lazy').setup({
   {
     'danferns/github-colors'
   },
-}, {})
+  {
+    "rose-pine/neovim", name = "rose-pine"
+  },
+})

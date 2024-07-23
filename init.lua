@@ -6,37 +6,11 @@ vim.g.maplocalleader = ' '
 require('plugins')
 
 -- Theme settings
-require("catppuccin").setup({
-  dim_inactive = {
-    enabled = true
-  },
-  styles = {
-    comments = {},
-    conditionals = {},
-    keywords = { "italic" },
-  },
-  color_overrides = {
-    mocha = {
-      base = "#151515",
-      mantle = "#202020",
-      crust = "#151515",
-    }
-  },
-  integrations = {
-    telescope = {
-      enabled = true,
-      style = "nvchad"
-    }
-  }
+require("rose-pine").setup({
+  dim_inactive_windows = true,
 })
 
-vim.cmd.colorscheme "catppuccin"
-
-require('remaps')
-require('settings')
-
--- App specific config
-require('apps.neovide')
+vim.cmd.colorscheme "rose-pine"
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
@@ -60,6 +34,12 @@ require('which-key').register({
   ['<leader>'] = { name = 'VISUAL <leader>' },
   ['<leader>h'] = { 'Git [H]unk' },
 }, { mode = 'v' })
+
+-- App specific config
+require('apps.neovide')
+
+require('remaps')
+require('settings')
 
 
 -- The line beneath this is called `modeline`. See `:help modeline`
