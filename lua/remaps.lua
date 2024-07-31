@@ -28,6 +28,12 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnos
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
+-- Quickfix List
+vim.keymap.set('n', '<leader>cn', ':cnext')
+vim.keymap.set('n', '<leader>cp', ':cprev')
+vim.keymap.set('n', '<leader>cf', ':colder')
+vim.keymap.set('n', '<leader>cb', ':cnewer')
+
 -- Center on scroll
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
