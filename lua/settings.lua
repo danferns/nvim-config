@@ -49,4 +49,3 @@ vim.o.expandtab = true
 vim.o.smartindent = true
 
 vim.g.have_nerd_font = true
-vim.cmd([[set shell=nu]])
