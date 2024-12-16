@@ -47,9 +47,6 @@ vim.keymap.set("n", "<C-J>", "<C-w>j")
 vim.keymap.set("n", "<C-K>", "<C-w>k")
 vim.keymap.set("n", "<C-L>", "<C-w>l")
 
--- Shortcut for Window Commands
-vim.keymap.set("n", "<Leader>v", "<C-w>")
-
 -- CD to Current file's directory
 vim.keymap.set('n', '<Leader>cc', ':cd %:h<CR>')
 
