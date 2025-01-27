@@ -48,4 +48,7 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.smartindent = true
 
+-- do not comment new lines created with 'o'
+vim.opt_local.formatoptions.remove({ 'o' })
+
 vim.g.have_nerd_font = true
