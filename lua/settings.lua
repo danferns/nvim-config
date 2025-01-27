@@ -49,6 +49,11 @@ vim.o.expandtab = true
 vim.o.smartindent = true
 
 -- do not comment new lines created with 'o'
-vim.opt_local.formatoptions.remove({ 'o' })
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "*",
+  callback = function()
+    vim.opt_local.formatoptions:remove({ 'r', 'o' })
+  end,
+})
 
 vim.g.have_nerd_font = true
