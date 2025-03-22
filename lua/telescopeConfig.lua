@@ -82,8 +82,3 @@ vim.keymap.set('n', '<leader>sc', function ()
     cwd = vim.fn.stdpath("config")
   }
 end, { desc = '[S]earch [C]onfig' })
-vim.keymap.set('n', '<leader>sl', function ()
-  require('telescope.builtin').find_files {
-    cwd = vim.fn.stdpath("state") .. "/sessions/"
-  }
-end, { desc = '[S]earch [L]ast Sessions' })

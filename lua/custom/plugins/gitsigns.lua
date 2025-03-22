@@ -73,7 +73,7 @@ return {
       -- Format Hunks
       map('n', '<Leader>f', function()
         local hunks = gs.get_hunks()
-        
+                
       end)
     end,
   },
