@@ -69,7 +69,7 @@ local servers = {
   clangd = {},
   -- gopls = {},
   pyright = {
-    filetypes = { ".py", ".pyscript"}
+    filetypes = { "py", "pyscript", "python"}
   },
   rust_analyzer = {},
   tsserver = {},
