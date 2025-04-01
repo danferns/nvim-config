@@ -63,8 +63,12 @@ vim.keymap.set('n', '<Leader>gq', function()
     vim.cmd(":Git commit")
     local message = vim.fn.system("git diff --staged --ignore-all-space -U0 | git_commit_summary")
     vim.api.nvim_buf_set_lines(0, 0, 0, false, vim.split(message, "\n"))
-    vim.defer_fn(function()
-        vim.cmd(":x")
-        vim.cmd("Git push")
-    end, 100)
+    local commit_bufnr = vim.api.nvim_get_current_buf()
+    vim.api.nvim_create_autocmd("BufWipeout", {
+        buffer = commit_bufnr,
+        once = true,
+        callback = function()
+            vim.cmd("Git push")
+        end,
+    })
 end)
