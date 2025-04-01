@@ -57,19 +57,11 @@ vim.keymap.set('n', '<Leader>gC', ':G commit -a<CR>')
 vim.keymap.set('n', '<Leader>gd', ':Gvdiffsplit<CR>')
 vim.keymap.set('n', '<Leader>gs', ':Git<CR>')
 vim.keymap.set('n', '<Leader>gp', ':Git push<CR>')
-vim.keymap.set('n', '<Leader>gq', function()
-    -- quick commit using AI commit message, then push
-    vim.cmd(":Git stage *")
-    vim.cmd(":Git commit")
+vim.keymap.set('n', '<Leader>ga', function()
+    -- auto fill commit message using AI
     local message = vim.fn.system("git diff --staged --ignore-all-space -U0 | git_commit_summary")
     vim.api.nvim_buf_set_lines(0, 0, 0, false, vim.split(message, "\n"))
-
-    local commit_bufnr = vim.api.nvim_get_current_buf()
-    vim.api.nvim_create_autocmd("BufWipeout", {
-        buffer = commit_bufnr,
-        once = true,
-        callback = function()
-            vim.cmd("silent! Git push")
-        end,
-    })
 end)
+
+-- quick commit
+vim.keymap.set('n', '<Leader>gq', ':silent! !qc')
