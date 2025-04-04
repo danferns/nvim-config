@@ -64,4 +64,4 @@ vim.keymap.set('n', '<Leader>ga', function()
 end)
 
 -- quick commit
-vim.keymap.set('n', '<Leader>gq', ':silent! !qc')
+vim.keymap.set('n', '<Leader>gq', ':silent! !qc<CR>')
