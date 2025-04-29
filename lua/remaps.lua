@@ -65,3 +65,11 @@ end)
 
 -- quick commit
 vim.keymap.set('n', '<Leader>gq', ':silent! !qc<CR>')
+
+-- GPT Prompt
+vim.keymap.set('v', '<Leader>ir', ':GpRewrite<CR>')
+vim.keymap.set('n', '<Leader>ic', ':GpChatToggle<CR>')
+vim.keymap.set('n', '<Leader>iq', ':GpChatDelete<CR>')
+vim.keymap.set('v', '<Leader>ic', ':GpChatPaste vsplit<CR>')
+vim.keymap.set('n', '<Leader>ik', ':GpContext<CR>')
+vim.keymap.set({'n', 'v'}, '<Leader>ix', ':GpStop<CR>')
