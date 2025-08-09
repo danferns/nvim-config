@@ -73,8 +73,11 @@ local servers = {
     },
     rust_analyzer = {},
     ts_ls = {},
-    svelte = {},
+    svelte = {
+        filetypes = { "svelte", "md"}
+    },
     html = {},
+    elmls = {},
 
     -- autohotkey_lsp = {
     --     -- cmd = { "node", "D:/libs/ahk_lsp/server/dist/server.js", "--stdio" },

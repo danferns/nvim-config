@@ -26,7 +26,7 @@ return {
                     name = "LLM Code",
                     chat = false,
                     command = true,
-                    model = { model = "claude-3.7-sonnet", temperature = 0.0001, top_p = 0.95 },
+                    model = { model = "claude-sonnet-4", temperature = 0.0001, top_p = 0.95 },
                     system_prompt = require("gp.defaults").code_system_prompt,
                 },
                 {
@@ -34,7 +34,7 @@ return {
                     name = "LLM Chat",
                     chat = true,
                     command = false,
-                    model = { model = "claude-3.7-sonnet", temperature = 0.7, top_p = 0.95 },
+                    model = { model = "claude-sonnet-4", temperature = 0.7, top_p = 0.95 },
                     system_prompt = require("gp.defaults").chat_system_prompt,
                 },
             }
